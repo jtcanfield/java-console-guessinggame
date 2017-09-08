@@ -24,44 +24,32 @@ public class TalkingComputer {
 		        while (keepPlaying) {
 		            boolean validInput = true;
 		            boolean endgame = false;
-		            //int guess, number;
 		            double number;
 		            String answer;
-		            number = /*(int)*/ (Math.floor(Math.random() * 10) + 1);
+		            number = (Math.floor(Math.random() * 10) + 1);
 		            System.out.println("I'm guessing a number between 1-10");
 		            System.out.println("What is your guess? ");
 		            String guessstring = in.next();
 		            do {
 		                validInput = true;
-		                
-		               //if (guess instanceof ){
 		                try
 			                {
 			                  int guess = Integer.parseInt(guessstring);
 			                  endgame = true;
-			                  //nextInt will throw InputMismatchException
-			                  //if the next token does not match the Integer
-			                  //regular expression, or is out of range
-			                  //int usrInput=guess.nextInt();
 			                }
 			                catch(InputMismatchException exception)
 			                {
-			                  //Print "This is not an integer"
-			                  //when user put other than integer
 			                  endgame = false;
 			                  System.out.println("This is not an integer");
 			                }
 			                catch(NumberFormatException exception)
 			                {
-			                  //Print "This is not an integer"
-			                  //when user put other than integer
 			                  endgame = false;
 			                  System.out.println("That is not a number");
 			                }
 		                if (endgame == true){
 		                	int guess = Integer.parseInt(guessstring);
 		                	 if (guess < 1 || guess > 10) {
-//				                	validInput = true;
 				                	endgame = false;
 				                    System.out.println("That number is not between 1 and 10, guess again!");
 				                } 	
@@ -77,7 +65,6 @@ public class TalkingComputer {
 		                	
 		                }*/
 		            } while(!validInput);
-		                
 		            while(endgame == true) {
 		            	int guess = Integer.parseInt(guessstring);
 		            	if (guess == number)
